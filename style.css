@@ -1,0 +1,441 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #d6d6d6;
+    height: 100%;
+    width: 99%;
+
+
+}
+
+
+#xablau {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  width: 70vh;
+  height: 90vh;
+
+}
+
+
+.block {
+  position: relative;
+  background-image: url('fundojogo.jpg'); /* Substitua com o caminho da sua imagem */
+  background-size: cover; /* A imagem cobrirá todo o espaço da div */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center center; /* Centraliza a imagem na div */
+  top: 5%;
+  border-radius: 15px; /* Valor para arredondar as bordas */
+  height: 75vh;
+
+}
+
+.glow::before, .glow::after {
+  content: '';
+  position: absolute;
+  left: -1%; /* Aumente o valor para aumentar todas as bordas */
+  top: -1%; /* Aumente o valor para aumentar todas as bordas */
+  background: linear-gradient(45deg, #0066ff, #0040ff, #151bb7, #003fd1, #0030db, #099ec3, #0d1ace, #0011ff, #00bfff);
+  background-size: 400%;
+  width: 102%;/* Aumente o valor para aumentar todas as bordas */
+  height: 102%; /* Aumente o valor para aumentar todas as bordas */
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  border-radius: 15px; /* Valor para arredondar a borda */
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.glow::after {
+  filter: blur(30px);
+}
+
+.glow::after {
+  filter: blur(0px);
+}
+
+.botao-jogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(52, 152, 219, 0);
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s;
+    font-size: 25px;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.botao-jogo:hover {
+    background-color: #006eff;
+    transform: scaleX(1.1);
+    transform-origin: left;
+}
+#temporizador {
+  background-color: #333;
+  color: #fff;
+  padding: 1vh;
+  border: 0.2vw solid #0077b6;
+  border-radius: 1vh;
+  font-size: 2.5vh;
+  width: 70%;
+  height: 5%;
+  margin-top: 3vh;
+  display: none;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+#resultado {
+  background-color: #333;
+  color: #fff;
+  padding: 1vh;
+  border: 0.2vw solid #0077b6;
+  border-radius: 1vh;
+  font-size: 2.5vh;
+  width: 100%;
+  height: 5%;
+  margin-top: 5vh;
+  display: none;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+#resultado-temp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vh;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+#pergunta {
+  margin-top: 2vh;
+  background-color: #f0f0f0;
+  border: 0.2vw solid #333;
+  padding: 1vh;
+  text-align: center;
+  border-radius: 1vh;
+  box-shadow: 0 0 0.5vh rgba(0, 0, 0, 0.2);
+  font-size: 2.5vh;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+#bta, #btb, #btc, #btd {
+  padding: 2.5vh 2vh;
+  font-size: 3vh;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  transform: translate(-50%, -50%);
+  margin-left: 5vh;
+  margin-top: 10vh;
+}
+
+#resetButton {
+  padding: 2.5vh 5vh;
+  font-size: 2.5vh;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', sans-serif;
+  margin-top: 15vh;
+  transition: 0.1s;
+  border-radius: 1vh;
+}
+
+
+
+#resetButton:hover{
+  background: a0a0a0;
+  color: #000;
+  box-shadow: 0 0 8px #a0a0a0, 0 0 35px #a0a0a0, 0 0 60px #a0a0a0;
+}
+
+#bta {
+  background-color: #e74c3c; /* Vermelho */
+  margin-left: 5vh;
+  display: inline-block;
+  transition: 0.1s;
+  border: 0.2vh solid black;
+  border-radius:1vh;
+}
+
+#bta:hover{
+  background: #e74c3c;
+  color: #000;
+  box-shadow: 0 0 8px #e74c3c, 0 0 35px #e74c3c, 0 0 60px #e74c3c;
+  border: 0.2vh solid #e74c3c;
+}
+
+#btb {
+  background-color: #f1c40f; /* Amarelo */
+
+  display: inline-block;
+  transition: 0.1s;
+  border: 0.2vh solid black;
+  border-radius:1vh;
+}
+
+#btb:hover{
+  background: #f1c40f;
+  color: #000;
+  box-shadow: 0 0 8px #f1c40f, 0 0 35px #f1c40f, 0 0 60px #f1c40f;
+  border: 0.2vh solid #f1c40f;
+}
+#btc {
+  background-color: #3498db; /* Azul */
+
+  display: inline-block;
+  transition: 0.1s;
+  border: 0.2vh solid black;
+  border-radius:1vh;
+}
+
+#btc:hover{
+  background: #3498db;
+  color: #000;
+  box-shadow: 0 0 8px #3498db, 0 0 35px #3498db, 0 0 60px #3498db;
+  border: 0.2vh solid #3498db;
+}
+
+#btd {
+  background-color: #2ecc71; /* Verde */
+  display: inline-block;
+  transition: 0.1s;
+  border: 0.2vh solid black;
+  border-radius:1vh;
+}
+
+#btd:hover{
+  background: #2ecc71;
+  color: #000;
+  box-shadow: 0 0 8px #2ecc71, 0 0 35px #2ecc71, 0 0 60px #2ecc71;
+  border: 0.2vh solid #2ecc71;
+}
+
+#botao-mudo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-image: url('telainicial/som.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(52, 152, 219, 0);
+    margin: 1%;
+    cursor: pointer;
+    border: none;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -20;
+}
+
+.background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    inset: 0;
+    position: fixed;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+
+
+.imagemeio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.imagemeio {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.imagemeio img {
+    width: 50%;
+    height: auto;
+}
+
+.imagemeio p {
+    color: white;
+    font-size: 18px;
+    margin: 20px 0 28px;
+    max-width: 570px;
+    width: 100%;
+    text-align: left;
+}
+
+.imagemeio2 {
+    width: 35%;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.imagemeio2 img {
+    width: 100%;
+    height: auto;
+}
+.texto-principal
+{
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+
+.book-container {
+  position: absolute;
+  width: 70vh; /* Largura do contêiner do livro, ajuste conforme necessário */
+  height: 90vh;
+  left: 55%;
+  top: 5%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  border-radius: 15px;
+  order: 2;
+
+}
+
+
+.book-container::-webkit-scrollbar {
+    width: 14px;
+    height: 0px;
+}
+.book-container::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: #0010eb;
+}
+.book-container::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+.book-container::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+  
+
+
+@media (max-width: 720px) {
+  #xablau {
+    width: 97%; /* Ocupa toda a largura da tela */
+    height: 50%;
+    left: 2%;
+  }
+  
+  #selecao-jogo {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%;
+  }
+  .botao-jogo, .botao-jogo:hover{
+    padding: 0.3vh 0.3vh;
+      font-size: 3vh;
+      margin: -1vh;
+      font-family: 'Comic Sans MS', sans-serif;
+  }
+  .imagemeio2 img{
+    width: 150%; 
+    height: 150%;
+    margin-left: -30%;
+      }
+  body {
+    overflow-x: hidden; 
+  }
+  .imagemeio img {
+    width: 150%; 
+    height: 150%;
+    margin-left: -40%;
+
+  }
+  .imagemeio p
+  {
+      font-size: 2vh;
+      margin-top: 20%;
+      width: 200%;
+
+
+  }
+
+  .book-container{
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%;
+    margin-top: 52vh;
+    left: 2%;
+
+  }
+  #bta, #btb, #btc, #btd{
+    padding: 2.5vh 2vh;
+    font-size: 2vh;
+    margin-top: 3vh;
+    
+  }
+  #temporizador, #resultado-temp, #resetButton {
+     padding: 1.5vh 1vh;
+      font-size: 2vh;
+      margin-top: 1vh;
+
+  }
+  #resultado {
+      font-size: 2vh;
+      margin-top: -7vh;
+
+  }
+  .page img{
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 200%;
+
+  }
+
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* Valor para arredondar as bordas */
+  box-sizing: border-box;
+
+
+}
+
+#pg1-1, #pg1-6, #pg2-1, #pg2-6, #pg3-1, #pg3-6, #pg4-1, #pg4-6, #pg5-1, #pg5-6 {
+    border-radius: 15px;
+}
+
+.page img{
+  width: 100%;
+  height: 100%;
+}
+

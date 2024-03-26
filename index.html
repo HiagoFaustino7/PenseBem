@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meus Jogos</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- 1 - Configuração media query -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <div class="background">
+    <video loop autoplay muted>
+      <source src="telainicial/sonic.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  
+<body id="body">
+    <div id="musica-container">
+      <audio id="musica" autoplay loop>
+       <source src="telainicial/musicafundo.mp3" type="audio/mpeg">
+
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <button id="botao-mudo"></button>
+  </div>
+  
+  <div id="selecao-jogo" class="selecao-jogo">
+
+    
+    <div id="posicao-botaoi" class="posicao-botaoi">
+      <button class="botao-jogo" onclick="iniciarJogo('jogo1'); jogo()">Jogo 081</button>
+      <button class="botao-jogo" onclick="iniciarJogo('jogo2'); jogo()">Jogo 082</button>
+      <button class="botao-jogo" onclick="iniciarJogo('jogo3'); jogo()">Jogo 083</button>
+      <button class="botao-jogo" onclick="iniciarJogo('jogo4'); jogo()">Jogo 084</button>
+      <button class="botao-jogo" onclick="iniciarJogo('jogo5'); jogo()">Jogo 085</button>
+      <button class="botao-jogo" onclick="iniciarJogo('jogo6'); jogo()">Jogo 086</button>
+    </div>
+    
+    
+    <div class="imagemeio-container">
+      <div class="imagemeio">
+        <img src="telainicial/sonico1.png">
+        <p class="texto-principal">
+          Bem-vindo à emocionante aventura de Sonic & Knuckles, onde um recurso especial está prestes a elevar sua
+          experiência de jogo a um novo patamar. Este recurso exclusivo oferece informações valiosas e realizações
+          notáveis, permitindo que você supere desafios, descubra segredos ocultos e se torne um mestre do jogo.
+          Prepare-se para explorar o mundo de Sonic & Knuckles de uma maneira nunca vista antes, desbloquear locais
+          secretos, dominar técnicas avançadas e superar recordes enquanto embarca em uma aventura incrível!
+        </p>
+      </div>
+      <div class="imagemeio2">
+        <img src="telainicial/sonico.png">
+      </div>
+    </div>
+
+  </div>
+
+  <div id="jogo1" class="jogo"style="display:none;">
+    <div class="book-container">
+        <div id="pg1-1" class="page"><img src="jogos/programa1-1.jpg"></div>
+        <div class="page"><img src="jogos/programa1-2.jpg"></div>
+        <div class="page"><img src="jogos/programa1-3.jpg"></div>
+        <div class="page"><img src="jogos/programa1-4.jpg"></div>
+        <div class="page"><img src="jogos/programa1-5.jpg"></div>
+        <div id="pg1-6" class="page"><img src="jogos/programa1-6.jpg"></div>
+    </div>
+
+  </div>
+  <div id="jogo2" class="jogo" style="display:none;">
+    <!-- Conteúdo do Jogo 2 -->
+    <div class="book-container">
+      <div id="pg2-1" class="page"><img src="jogos/programa2-1.jpg"></div>
+      <div class="page"><img src="jogos/programa2-2.jpg"></div>
+      <div class="page"><img src="jogos/programa2-3.jpg"></div>
+      <div class="page"><img src="jogos/programa2-4.jpg"></div>
+      <div class="page"><img src="jogos/programa2-5.jpg"></div>
+      <div id="pg2-6" class="page"><img src="jogos/programa2-6.jpg"></div>
+    </div>
+    </div>
+
+  </div>
+
+  <div id="jogo3" class="jogo" style="display:none;">
+    <!-- Conteúdo do Jogo 3 -->
+    <div class="book-container">
+      <div id="pg3-1" class="page"><img src="jogos/programa3-1.jpg"></div>
+      <div class="page"><img src="jogos/programa3-2.jpg"></div>
+      <div class="page"><img src="jogos/programa3-3.jpg"></div>
+      <div class="page"><img src="jogos/programa3-4.jpg"></div>
+      <div class="page"><img src="jogos/programa3-5.jpg"></div>
+      <div id="pg3-6" class="page"><img src="jogos/programa3-6.jpg"></div>
+
+    </div>
+    </div>
+    <!-- Adicione aqui o conteúdo do Jogo 3 -->
+  </div>
+
+  <div id="jogo4" class="jogo" style="display:none;">
+    <!-- Conteúdo do Jogo 4 -->
+    <div class="book-container">
+      <div id="pg4-1" class="page"><img src="jogos/programa4-1.jpg"></div>
+      <div class="page"><img src="jogos/programa4-2.jpg"></div>
+      <div class="page"><img src="jogos/programa4-3.jpg"></div>
+      <div class="page"><img src="jogos/programa4-4.jpg"></div>
+      <div class="page"><img src="jogos/programa4-5.jpg"></div>
+      <div id="pg4-6" class "page"><img src="jogos/programa4-6.jpg"></div>
+
+    </div>
+    </div>
+    <!-- Adicione aqui o conteúdo do Jogo 4 -->
+  </div>
+
+  <div id="jogo5" class="jogo" style="display:none;">
+    <!-- Conteúdo do Jogo 5 -->
+    <div class="book-container">
+      <div id="pg5-1" class="page"><img src="jogos/programa5-1.jpg"></div>
+      <div class="page"><img src="jogos/programa5-2.jpg"></div>
+      <div class="page"><img src="jogos/programa5-3.jpg"></div>
+      <div class="page"><img src="jogos/programa5-4.jpg"></div>
+      <div class="page"><img src="jogos/programa5-5.jpg"></div>
+      <div id="pg5-6" class="page"><img src="jogos/programa5-6.jpg"></div>
+
+    </div>
+    </div>
+    <!-- Adicione aqui o conteúdo do Jogo 5 -->
+  </div>
+
+  <div id="jogo6" class="jogo" style="display:none;">
+    <!-- Conteúdo do Jogo 6 -->
+    <div class="book-container">
+      <div class="page" class="block glow">
+        <embed class="pdf-embed" src="programa6.pdf" type="application/pdf">
+      </div>
+    </div>
+    </div>
+    <!-- Adicione aqui o conteúdo do Jogo 6 -->
+  </div>
+
+    <div id="xablau" class="block glow">
+        <p><input type="text" id="pergunta" size="30" readonly></p>
+      <div id="botoes">
+        <button id="bta" onclick="responder('A')">A</button>
+        <button id="btb" onclick="responder('B')">B</button>
+        <button id="btc" onclick="responder('C')">C</button>
+        <button id="btd" onclick="responder('D')">D</button>
+      </div>
+    
+    <div id="resultado-temp">
+      <p>
+        <output id="resultado"></output>
+      </p>
+        <div id="temporizador"></div>
+    </div>
+  <div id="reiniciar-p" class="centralizar">
+    <button class="reset-button" id="resetButton">Voltar ao início</button>
+  </div>
+  <script src="teste.js"></script>
+    
+  <audio id="somMoeda">
+    <source src="telainicial/somMoeda.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="somErrou">
+    <source src="telainicial/somErrou.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <script>
+    document.getElementById('somMoeda').volume = 0.1;  // Define o volume para 50%
+    document.getElementById('somErrou').volume = 0.05;  // Define o volume para 50%
+  </script>
+  
+</body>
+
+
+</html>
