@@ -7,7 +7,7 @@ let tempoRestante = 30;
 var musica = document.getElementById("musica");
 var botaoMudo = document.getElementById("botao-mudo");
 musica.volume = 0.02;
-
+var folha = 30;
 
 
 
